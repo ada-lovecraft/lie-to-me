@@ -1,0 +1,20 @@
+
+<div>
+  <h1>Method: {{method}}</h1>
+  <form class="form-horizontal"></form>
+  <div class="row">
+    <div class="form-group">
+      <input type="text" ng-model="user.firstName" ng-readonly="canEdit"/>
+      <input type="text" ng-model="user.lastName" ng-readonly="canEdit"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group">
+      <input type="text" ng-model="user.twitter" ng-readonly="canEdit"/><a ng-href="http://twitter.com/{{user.twitter}}">
+        <button class="btn btn-info">@{{user.twitter}}</button></a>
+    </div>
+  </div>
+  <div class="row">
+    <p>User ID: {{user.id}}</p>
+  </div>
+</div>
