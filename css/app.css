@@ -6804,5 +6804,8 @@ td.visible-print {
   }
 }
 
+.page-header h1 {
+  font-size: 48px;
+}
 
 /*@ sourceMappingURL=app.css.map*/
