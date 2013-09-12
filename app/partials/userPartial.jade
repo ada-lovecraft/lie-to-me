@@ -1,0 +1,28 @@
+h1 Method: {{method}}
+p Last Login: {{lastLogin | date:'short'}}
+form.form-horizontal(name="userForm")
+	.form-group
+		.col-md-6
+			label First Name
+			input.form-control(type="text", ng-model="user.firstName",ng-readonly="{true: '', false: 'readonly'}[canEdit]")
+		.col-md-6
+			label Last Name
+			input.form-control(type="text", ng-model="user.lastName",ng-readonly="{true: '', false: 'readonly'}[canEdit]")
+	.form-group
+		.col-md-6
+			.input-group
+				.input-group-addon
+					span Twitter Handle
+				input.form-control(type="text", ng-model="user.twitter",ng-readonly="{true: '', false: 'readonly'}[canEdit]")
+		.col-md-6
+			a(ng-href="http://twitter.com/{{user.twitter}}")
+				button.btn.btn-info.col-md-12 Follow @{{user.twitter}} on Twitter
+	.form-group
+		.col-md-6
+			.input-group
+				.input-group-addon
+					span User ID
+				input.form-control(type="text", ng-model="user.id",readonly)
+		.col-md-6
+			button.form-control.btn.btn-primary(ng-click="update()", ng-show="canEdit",ng-disabled="userForm.$pristine") Update User
+	
