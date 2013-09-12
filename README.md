@@ -1,6 +1,8 @@
 #Lie To Me
 This is the code for the discussion concerning ngMockE2E at: http://codevinsky.github.io/development/2013/09/12/lie-to-me/
 
+Demo: http://codevinsky.github.io/lie-to-me
+
 You will need brunch, bower, and node installed to run this.
 
 1. Clone the repo
